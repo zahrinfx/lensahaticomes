@@ -1,0 +1,181 @@
+Folder PATH listing for volume Data
+Volume serial number is 74B4-0427
+D:.
+¦   index2.html
+¦   index3.zip
+¦   index4.html
+¦   indexold.html
+¦   LensaHatiComes_index_v2.html
+¦   New Text Document.txt
+¦   portfolio.json
+¦   senarai.txt
+¦   senarai2.txt
+¦   
++---images
+    ¦   images-02.ps1
+    ¦   images-02.txt
+    ¦   images-03.ps1
+    ¦   images-04.txt
+    ¦   New Text Document.txt
+    ¦   
+    +---Bayi dan Maternity
+    ¦   +---1
+    ¦   ¦       1-01.jpg
+    ¦   ¦       1-02.jpg
+    ¦   ¦       1-03.jpg
+    ¦   ¦       
+    ¦   +---2
+    ¦           2-01.jpg
+    ¦           2-02.jpg
+    ¦           
+    +---Convo
+    ¦   +---1
+    ¦   ¦       1-01.jpg
+    ¦   ¦       1-02.jpg
+    ¦   ¦       1-03.jpg
+    ¦   ¦       
+    ¦   +---2
+    ¦   ¦       2-01.jpg
+    ¦   ¦       2-02.jpg
+    ¦   ¦       2-03.jpg
+    ¦   ¦       2-04.jpg
+    ¦   ¦       2-05.jpg
+    ¦   ¦       2-06.jpg
+    ¦   ¦       2-07.jpg
+    ¦   ¦       2-08.jpg
+    ¦   ¦       2-09.jpg
+    ¦   ¦       2-10.jpg
+    ¦   ¦       2-11.jpg
+    ¦   ¦       2-12.jpg
+    ¦   ¦       2-13.jpg
+    ¦   ¦       
+    ¦   +---3
+    ¦   ¦       3-01.jpg
+    ¦   ¦       3-02.jpg
+    ¦   ¦       3-03.jpg
+    ¦   ¦       3-04.jpg
+    ¦   ¦       3-05.jpg
+    ¦   ¦       3-06.jpg
+    ¦   ¦       3-07.jpg
+    ¦   ¦       3-08.jpg
+    ¦   ¦       3-09.jpg
+    ¦   ¦       3-10.jpg
+    ¦   ¦       
+    ¦   +---4
+    ¦   ¦       4-01.jpg
+    ¦   ¦       4-02.jpg
+    ¦   ¦       4-03.jpg
+    ¦   ¦       4-04.jpg
+    ¦   ¦       4-05.jpg
+    ¦   ¦       4-06.jpg
+    ¦   ¦       4-07.jpg
+    ¦   ¦       4-08.jpg
+    ¦   ¦       4-09.jpg
+    ¦   ¦       4-10.jpg
+    ¦   ¦       4-11.jpg
+    ¦   ¦       4-12.jpg
+    ¦   ¦       4-13.jpg
+    ¦   ¦       4-14.jpg
+    ¦   ¦       4-15.jpg
+    ¦   ¦       4-16.jpg
+    ¦   ¦       
+    ¦   +---5
+    ¦           5-01.jpg
+    ¦           5-02.jpg
+    ¦           5-03.jpg
+    ¦           5-04.jpg
+    ¦           5-05.jpg
+    ¦           5-06.jpg
+    ¦           5-07.jpg
+    ¦           5-08.jpg
+    ¦           5-09.jpg
+    ¦           
+    +---Engagement
+    ¦   +---1
+    ¦   ¦       1-01.jpg
+    ¦   ¦       1-02.jpg
+    ¦   ¦       1-03.jpg
+    ¦   ¦       1-04.jpg
+    ¦   ¦       1-05.jpg
+    ¦   ¦       
+    ¦   +---2
+    ¦   ¦       2-01.jpg
+    ¦   ¦       2-02.jpg
+    ¦   ¦       2-03.jpg
+    ¦   ¦       2-04.jpg
+    ¦   ¦       2-05.jpg
+    ¦   ¦       2-06.jpg
+    ¦   ¦       2-07.jpg
+    ¦   ¦       
+    ¦   +---3
+    ¦   ¦       3-01.jpg
+    ¦   ¦       3-02.jpg
+    ¦   ¦       3-03.jpg
+    ¦   ¦       3-04.jpg
+    ¦   ¦       
+    ¦   +---4
+    ¦           4-01.jpg
+    ¦           4-02.jpg
+    ¦           4-03.jpg
+    ¦           4-04.jpg
+    ¦           4-05.jpg
+    ¦           4-06.jpg
+    ¦           4-07.jpg
+    ¦           4-08.jpg
+    ¦           4-09.jpg
+    ¦           4-10.jpg
+    ¦           4-11.jpg
+    ¦           4-12.jpg
+    ¦           4-13.jpg
+    ¦           4-14.jpg
+    ¦           4-15.jpg
+    ¦           4-16.jpg
+    ¦           
+    +---Potret Individu
+    ¦   +---1
+    ¦           1-01.jpg
+    ¦           1-02.jpg
+    ¦           
+    +---Wedding
+        +---1
+        ¦       1-01.jpg
+        ¦       1-02.jpg
+        ¦       1-03.jpg
+        ¦       1-04.jpg
+        ¦       1-05.jpg
+        ¦       1-06.jpg
+        ¦       1-07.jpg
+        ¦       
+        +---2
+        ¦       2-01.jpg
+        ¦       2-02.jpg
+        ¦       
+        +---3
+        ¦       3-01.jpg
+        ¦       3-02.jpg
+        ¦       
+        +---4
+        ¦       4-01.jpg
+        ¦       4-02.jpg
+        ¦       4-03.jpg
+        ¦       4-04.jpg
+        ¦       4-05.jpg
+        ¦       4-06.jpg
+        ¦       4-07.jpg
+        ¦       4-08.jpg
+        ¦       4-09.jpg
+        ¦       4-10.jpg
+        ¦       
+        +---5
+                5-01.jpg
+                5-02.jpg
+                5-03.jpg
+                5-04.jpg
+                5-05.jpg
+                5-06.jpg
+                5-07.jpg
+                5-08.jpg
+                5-09.jpg
+                5-10.jpg
+                5-11.jpg
+                

@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="ms" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lensa Hati Comes Photography menyediakan perkhidmatan fotografi profesional untuk potret individu, pasangan, keluarga, bayi, hari lahir, konvokesyen, perkahwinan, acara, korporat dan produk." />
+  <meta name="keywords" content="fotografi, jurugambar, photoshoot, portrait, wedding, family, baby, birthday, graduation, event, Malaysia" />
+  <meta name="theme-color" content="#111827" />
+  <title>Lensa Hati Comes Photography | Setiap Momen, Sebuah Cerita</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              50: '#fffbea',
+              100: '#fff3c4',
+              200: '#ffe587',
+              300: '#ffd24a',
+              400: '#f4b91f',
+              500: '#d4af37',
+              600: '#b88d19',
+              700: '#926a16',
+              800: '#79551a',
+              900: '#674718'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Playfair Display', 'serif']
+          },
+          boxShadow: {
+            soft: '0 18px 50px rgba(15, 23, 42, .12)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <style>
+    body { font-family: Inter, sans-serif; }
+    .font-display { font-family: "Playfair Display", serif; }
+    .hero-slide { opacity: 0; transition: opacity 1.2s ease; }
+    .hero-slide.active { opacity: 1; }
+    .ken-burns { animation: kenburns 12s ease-in-out infinite alternate; }
+    @keyframes kenburns { from { transform: scale(1); } to { transform: scale(1.08); } }
+    .reveal { opacity: 0; transform: translateY(28px); transition: .8s ease; }
+    .reveal.show { opacity: 1; transform: translateY(0); }
+    .portfolio-item.hidden-item { display: none; }
+    .glass { background: rgba(17,24,39,.66); backdrop-filter: blur(14px); }
+    .masonry { columns: 1; column-gap: 1rem; }
+    .masonry > * { break-inside: avoid; margin-bottom: 1rem; }
+    @media (min-width: 640px) { .masonry { columns: 2; } }
+    @media (min-width: 1024px) { .masonry { columns: 3; } }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height .35s ease; }
+    .faq-item.open .faq-answer { max-height: 250px; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+  </style>
+</head>
+
+<body class="bg-white text-slate-800 antialiased">
+
+  <!-- Navbar -->
+  <header id="navbar" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mt-4 flex h-16 items-center justify-between rounded-2xl glass px-5 shadow-soft">
+        <a href="#utama" class="flex items-center gap-3 text-white">
+          <span class="grid h-10 w-10 place-items-center rounded-full border border-gold-400 text-gold-400">
+            <i class="fa-solid fa-camera-retro"></i>
+          </span>
+          <div>
+            <p class="font-display text-lg font-bold leading-tight">Lensa Hati Comes</p>
+            <p class="text-[10px] uppercase tracking-[.32em] text-gold-300">Photography</p>
+          </div>
+        </a>
+
+        <nav class="hidden items-center gap-7 lg:flex">
+          <a class="nav-link text-sm text-white/80 hover:text-gold-300" href="#tentang">Tentang</a>
+          <a class="nav-link text-sm text-white/80 hover:text-gold-300" href="#servis">Servis</a>
+          <a class="nav-link text-sm text-white/80 hover:text-gold-300" href="#portfolio">Portfolio</a>
+          <a class="nav-link text-sm text-white/80 hover:text-gold-300" href="#pakej">Pakej</a>
+          <a class="nav-link text-sm text-white/80 hover:text-gold-300" href="#faq">FAQ</a>
+          <a href="#tempahan" class="rounded-full bg-gold-500 px-5 py-2.5 text-sm font-semibold text-slate-950 hover:bg-gold-400">Tempah Sekarang</a>
+        </nav>
+
+        <button id="menuBtn" class="grid h-10 w-10 place-items-center rounded-xl border border-white/20 text-white lg:hidden" aria-label="Buka menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+      <div id="mobileMenu" class="mt-2 hidden rounded-2xl glass p-4 shadow-soft lg:hidden">
+        <div class="grid gap-2">
+          <a class="rounded-xl px-4 py-3 text-white hover:bg-white/10" href="#tentang">Tentang</a>
+          <a class="rounded-xl px-4 py-3 text-white hover:bg-white/10" href="#servis">Servis</a>
+          <a class="rounded-xl px-4 py-3 text-white hover:bg-white/10" href="#portfolio">Portfolio</a>
+          <a class="rounded-xl px-4 py-3 text-white hover:bg-white/10" href="#pakej">Pakej</a>
+          <a class="rounded-xl px-4 py-3 text-white hover:bg-white/10" href="#faq">FAQ</a>
+          <a class="rounded-xl bg-gold-500 px-4 py-3 text-center font-semibold text-slate-950" href="#tempahan">Tempah Sekarang</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="utama" class="relative min-h-screen overflow-hidden bg-slate-950">
+    <div class="absolute inset-0">
+      <div class="hero-slide active absolute inset-0">
+        <img class="ken-burns h-full w-full object-cover" src="images/Potret Individu/1/1-01.jpg" alt="Potret individu profesional" />
+      </div>
+      <div class="hero-slide absolute inset-0">
+        <img class="ken-burns h-full w-full object-cover" src="images/Wedding/4/4-09.jpg" alt="Fotografi pasangan dan perkahwinan" />
+      </div>
+      <div class="hero-slide absolute inset-0">
+        <img class="ken-burns h-full w-full object-cover" src="images/Bayi dan Maternity/1/1-01.jpg" alt="Potret keluarga" />
+      </div>
+      <div class="hero-slide absolute inset-0">
+        <img class="ken-burns h-full w-full object-cover" src="images/Convo/3/3-07.jpg" alt="Convo" />
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/70 to-slate-950/20"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/30"></div>
+    </div>
+
+    <div class="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-4 pb-20 pt-32 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <div class="mb-6 inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm text-white/85 backdrop-blur">
+          <span class="h-2 w-2 rounded-full bg-gold-400"></span>
+          Fotografi profesional untuk setiap fasa kehidupan
+        </div>
+
+        <h1 class="font-display text-5xl font-bold leading-tight text-white sm:text-6xl lg:text-7xl">
+          Setiap Momen,<br />
+          <span class="text-gold-400">Sebuah Cerita.</span>
+        </h1>
+
+        <p class="mt-6 max-w-2xl text-lg leading-8 text-white/75">
+          Daripada potret individu, pasangan, keluarga, bayi dan hari istimewa hingga acara, korporat serta produk—kami merakam setiap detik dengan sentuhan yang jujur, elegan dan penuh emosi.
+        </p>
+
+        <div class="mt-9 flex flex-wrap gap-4">
+          <a href="#tempahan" class="rounded-full bg-gold-500 px-7 py-3.5 font-semibold text-slate-950 shadow-lg hover:-translate-y-1 hover:bg-gold-400">
+            Tempah Sesi <i class="fa-solid fa-arrow-right ml-2"></i>
+          </a>
+          <a href="#portfolio" class="rounded-full border border-white/30 bg-white/10 px-7 py-3.5 font-semibold text-white backdrop-blur hover:bg-white/20">
+            Lihat Portfolio
+          </a>
+        </div>
+
+        <div class="mt-12 grid max-w-2xl grid-cols-3 gap-4 text-white">
+          <div><p class="text-2xl font-bold text-gold-400">800+</p><p class="text-xs text-white/60">Pelanggan</p></div>
+          <div><p class="text-2xl font-bold text-gold-400">5,000+</p><p class="text-xs text-white/60">Foto Dihantar</p></div>
+          <div><p class="text-2xl font-bold text-gold-400">6+</p><p class="text-xs text-white/60">Tahun Pengalaman</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section id="servis" class="bg-slate-50 py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="reveal mx-auto max-w-3xl text-center">
+        <p class="text-sm font-bold uppercase tracking-[.25em] text-gold-600">Perkhidmatan Kami</p>
+        <h2 class="mt-4 font-display text-4xl font-bold text-slate-950 sm:text-5xl">Fotografi Untuk Setiap Cerita</h2>
+        <p class="mt-5 text-slate-600">Pilih sesi yang sesuai dengan momen anda. Setiap pakej boleh disesuaikan mengikut konsep, lokasi dan keperluan.</p>
+      </div>
+
+      <div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <article class="reveal group relative min-h-[360px] overflow-hidden rounded-3xl shadow-soft">
+          <img class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-110" src="images/Potret Individu/1/1-01.jpg" alt="Potret individu" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20"></div>
+          <div class="absolute inset-x-0 bottom-0 p-7 text-white"><p class="text-sm text-gold-300">Personal Branding</p><h3 class="mt-1 font-display text-3xl font-bold">Potret Individu</h3></div>
+        </article>
+        <article class="reveal group relative min-h-[360px] overflow-hidden rounded-3xl shadow-soft">
+          <img class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-110" src="images/Engagement/1/1-01.jpg" alt="Sesi pasangan" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20"></div>
+          <div class="absolute inset-x-0 bottom-0 p-7 text-white"><p class="text-sm text-gold-300">Couple & Engagement</p><h3 class="mt-1 font-display text-3xl font-bold">Pasangan & Pertunangan</h3></div>
+        </article>
+        <article class="reveal group relative min-h-[360px] overflow-hidden rounded-3xl shadow-soft">
+          <img class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-110" src="images/Wedding/1/1-01.jpg" alt="Perkahwinan" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20"></div>
+          <div class="absolute inset-x-0 bottom-0 p-7 text-white"><p class="text-sm text-gold-300">Family Session</p><h3 class="mt-1 font-display text-3xl font-bold">Perkahwinan</h3></div>
+        </article>
+        <article class="reveal group relative min-h-[360px] overflow-hidden rounded-3xl shadow-soft">
+          <img class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-110" src="images/Bayi dan Maternity/2/2-01.jpg" alt="Fotografi bayi" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20"></div>
+          <div class="absolute inset-x-0 bottom-0 p-7 text-white"><p class="text-sm text-gold-300">Maternity & Newborn</p><h3 class="mt-1 font-display text-3xl font-bold">Bayi & Maternity</h3></div>
+        </article>
+        <article class="reveal group relative min-h-[360px] overflow-hidden rounded-3xl shadow-soft">
+          <img class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-110" src="images/Bayi dan Maternity/1/1-01.jpg" alt="Hari lahir dan acara" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20"></div>
+          <div class="absolute inset-x-0 bottom-0 p-7 text-white"><p class="text-sm text-gold-300">Birthday & Event</p><h3 class="mt-1 font-display text-3xl font-bold">Hari Lahir & Acara</h3></div>
+        </article>
+        <article class="reveal group relative min-h-[360px] overflow-hidden rounded-3xl shadow-soft">
+          <img class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-110" src="images/Convo/5/5-01.jpg" alt="Convo" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20"></div>
+          <div class="absolute inset-x-0 bottom-0 p-7 text-white"><p class="text-sm text-gold-300">Corporate & Commercial</p><h3 class="mt-1 font-display text-3xl font-bold">Convo</h3></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="tentang" class="py-24">
+    <div class="mx-auto grid max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+      <div class="reveal relative">
+        <img class="h-[600px] w-full rounded-3xl object-cover shadow-soft" src="images/hero/hero-main.jpg" alt="Jurugambar profesional" />
+        <div class="absolute -bottom-7 -right-3 max-w-xs rounded-3xl bg-slate-950 p-7 text-white shadow-2xl sm:right-7">
+          <p class="font-display text-3xl font-bold text-gold-400">“</p>
+          <p class="leading-7 text-white/80">Kami bukan sekadar mengambil gambar. Kami mengabadikan emosi yang akan terus hidup.</p>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <p class="text-sm font-bold uppercase tracking-[.25em] text-gold-600">Tentang Kami</p>
+        <h2 class="mt-4 font-display text-4xl font-bold leading-tight text-slate-950 sm:text-5xl">Di Sebalik Setiap Senyuman, Ada Cerita.</h2>
+        <p class="mt-6 leading-8 text-slate-600">Lensa Hati Comes Photography diwujudkan untuk membantu anda menyimpan detik-detik yang paling bermakna. Kami percaya gambar terbaik bukan hanya cantik, tetapi mampu membawa anda kembali kepada perasaan pada hari tersebut.</p>
+        <p class="mt-4 leading-8 text-slate-600">Daripada sesi santai seorang individu hingga majlis besar bersama keluarga dan rakan, kami menjaga setiap perincian—konsep, pose, pencahayaan, komposisi dan suntingan—supaya anda menerima hasil yang autentik dan berkualiti.</p>
+
+        <div class="mt-8 grid gap-4 sm:grid-cols-2">
+          <div class="rounded-2xl border border-slate-200 p-5"><i class="fa-solid fa-camera text-gold-500"></i><h3 class="mt-3 font-semibold">Peralatan Profesional</h3><p class="mt-2 text-sm text-slate-500">Kamera, lensa dan pencahayaan yang sesuai untuk setiap situasi.</p></div>
+          <div class="rounded-2xl border border-slate-200 p-5"><i class="fa-solid fa-wand-magic-sparkles text-gold-500"></i><h3 class="mt-3 font-semibold">Suntingan Premium</h3><p class="mt-2 text-sm text-slate-500">Warna semula jadi, tona konsisten dan kemasan teliti.</p></div>
+          <div class="rounded-2xl border border-slate-200 p-5"><i class="fa-solid fa-face-smile text-gold-500"></i><h3 class="mt-3 font-semibold">Pengalaman Mesra</h3><p class="mt-2 text-sm text-slate-500">Panduan pose yang mudah supaya anda sentiasa selesa.</p></div>
+          <div class="rounded-2xl border border-slate-200 p-5"><i class="fa-solid fa-bolt text-gold-500"></i><h3 class="mt-3 font-semibold">Penghantaran Pantas</h3><p class="mt-2 text-sm text-slate-500">Galeri digital tersusun dan mudah dikongsi.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  const gallery = document.getElementById('portfolioGallery');
+const filterButtons = document.querySelectorAll('.filter-btn');
+
+let portfolioData = {};
+
+fetch('portfolio.json')
+  .then(res => res.json())
+  .then(data => {
+    portfolioData = data;
+    renderPortfolio('all');
+  });
+
+function createImageCard(src, category) {
+  return `
+    <button
+      class="portfolio-item group w-full overflow-hidden rounded-2xl"
+      data-image="${src}">
+      <img
+        src="${src}"
+        class="w-full transition duration-700 group-hover:scale-105"
+        alt="${category}">
+    </button>
+  `;
+}
+
+function renderPortfolio(filter) {
+
+  let html = '';
+
+  if (filter === 'all') {
+
+    html += createImageCard(
+      portfolioData.portrait[0],
+      'Potret'
+    );
+
+    html += createImageCard(
+      portfolioData.family[0],
+      'Keluarga'
+    );
+
+    html += createImageCard(
+      portfolioData.wedding[0],
+      'Majlis'
+    );
+
+    html += createImageCard(
+      portfolioData.event[0],
+      'Acara'
+    );
+
+  } else {
+
+    portfolioData[filter].forEach(img => {
+      html += createImageCard(img, filter);
+    });
+
+  }
+
+  gallery.innerHTML = html;
+
+  document
+    .querySelectorAll('.portfolio-item')
+    .forEach(item => {
+
+      item.addEventListener('click', () => {
+
+        lightboxImage.src =
+          item.dataset.image;
+
+        lightbox.classList.remove('hidden');
+        lightbox.classList.add('flex');
+
+        document.body.style.overflow =
+          'hidden';
+      });
+
+    });
+
+}
+
+filterButtons.forEach(btn => {
+
+  btn.addEventListener('click', () => {
+
+    filterButtons.forEach(b => {
+
+      b.classList.remove(
+        'bg-gold-500',
+        'text-slate-950'
+      );
+
+      b.classList.add(
+        'border',
+        'border-white/15',
+        'text-white/70'
+      );
+
+    });
+
+    btn.classList.add(
+      'bg-gold-500',
+      'text-slate-950'
+    );
+
+    btn.classList.remove(
+      'border',
+      'border-white/15',
+      'text-white/70'
+    );
+
+    renderPortfolio(
+      btn.dataset.filter
+    );
+
+  });
+
+});
+
+  <!-- Stats -->
+<section class="border-b border-slate-200 bg-white py-16">
+    <div class="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-4 text-center sm:px-6 lg:grid-cols-4 lg:px-8">
+
+        <div class="reveal">
+            <p class="counter font-display text-4xl font-bold text-gold-600" data-target="800">0</p>
+            <p class="mt-2 text-sm text-slate-500">Pelanggan Gembira</p>
+        </div>
+
+        <div class="reveal">
+            <p class="counter font-display text-4xl font-bold text-gold-600" data-target="5000">0</p>
+            <p class="mt-2 text-sm text-slate-500">Foto Dihantar</p>
+        </div>
+
+        <div class="reveal">
+            <p class="counter font-display text-4xl font-bold text-gold-600" data-target="6">0</p>
+            <p class="mt-2 text-sm text-slate-500">Tahun Pengalaman</p>
+        </div>
+
+        <div class="reveal">
+            <p class="counter font-display text-4xl font-bold text-gold-600" data-target="100">0</p>
+            <p class="mt-2 text-sm text-slate-500">Acara Dirakam</p>
+        </div>
+
+    </div>
+</section>
+
+  <!-- Pricing -->
+  <section id="pakej" class="bg-slate-50 py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="reveal mx-auto max-w-3xl text-center">
+        <p class="text-sm font-bold uppercase tracking-[.25em] text-gold-600">Pakej Fotografi</p>
+        <h2 class="mt-4 font-display text-4xl font-bold text-slate-950 sm:text-5xl">Pilihan Mudah, Hasil Bermakna</h2>
+        <p class="mt-5 text-slate-600">Harga di bawah ialah contoh dan boleh diubah kemudian.</p>
+      </div>
+
+      <div class="mt-14 grid gap-6 lg:grid-cols-3">
+        <article class="reveal rounded-3xl bg-white p-8 shadow-soft">
+          <p class="text-sm font-semibold uppercase tracking-widest text-gold-600">Potret Individu</p>
+          <h3 class="mt-3 font-display text-3xl font-bold">Portrait Essential</h3>
+          <p class="mt-5"><span class="text-4xl font-bold text-slate-950">RM199</span></p>
+          <ul class="mt-7 space-y-4 text-sm text-slate-600">
+            <li><i class="fa-solid fa-check mr-3 text-gold-500"></i>Sesi sehingga 1 jam</li>
+            <li><i class="fa-solid fa-check mr-3 text-gold-500"></i>1 lokasi pilihan</li>
+            <li><i class="fa-solid fa-check mr-3 text-gold-500"></i>15 foto suntingan premium</li>
+            <li><i class="fa-solid fa-check mr-3 text-gold-500"></i>Galeri digital</li>
+          </ul>
+          <a href="#tempahan" class="mt-8 block rounded-full border border-slate-300 px-5 py-3 text-center font-semibold hover:border-gold-500 hover:bg-gold-50">Pilih Pakej</a>
+        </article>
+
+        <article class="reveal relative rounded-3xl bg-slate-950 p-8 text-white shadow-2xl">
+          <span class="absolute right-6 top-6 rounded-full bg-gold-500 px-3 py-1 text-xs font-bold text-slate-950">POPULAR</span>
+          <p class="text-sm font-semibold uppercase tracking-widest text-gold-400">Keluarga & Pasangan</p>
+          <h3 class="mt-3 font-display text-3xl font-bold">Story Session</h3>
+          <p class="mt-5"><span class="text-4xl font-bold">RM399</span></p>
+          <ul class="mt-7 space-y-4 text-sm text-white/70">
+            <li><i class="fa-solid fa-check mr-3 text-gold-400"></i>Sesi sehingga 1.5 jam</li>
+            <li><i class="fa-solid fa-check mr-3 text-gold-400"></i>Sehingga 6 orang</li>
+            <li><i class="fa-solid fa-check mr-3 text-gold-400"></i>30 foto suntingan premium</li>
+            <li><i class="fa-solid fa-check mr-3 text-gold-400"></i>Galeri digital peribadi</li>
+          </ul>
+          <a href="#tempahan" class="mt-8 block rounded-full bg-gold-500 px-5 py-3 text-center font-semibold text-slate-950 hover:bg-gold-400">Pilih Pakej</a>
+        </article>
+
+        <article class="reveal rounded-3xl bg-white p-8 shadow-soft">
+          <p class="text-sm font-semibold uppercase tracking-widest text-gold-600">Majlis & Acara</p>
+          <h3 class="mt-3 font-display text-3xl font-bold">Event Signature</h3>
+          <p class="mt-5"><span class="text-4xl font-bold text-slate-950">Custom</span></p>
+          <ul class="mt-7 space-y-4 text-sm text-slate-600">
+            <li><i class="fa-solid fa-check mr-3 text-gold-500"></i>Akad nikah, kahwin dan pertunangan</li>
+            <li><i class="fa-solid fa-check mr-3 text-gold-500"></i>Birthday, baby dan private event</li>
+            <li><i class="fa-solid fa-check mr-3 text-gold-500"></i>Acara korporat</li>
+            <li><i class="fa-solid fa-check mr-3 text-gold-500"></i>Sebutharga mengikut keperluan</li>
+          </ul>
+          <a href="#tempahan" class="mt-8 block rounded-full border border-slate-300 px-5 py-3 text-center font-semibold hover:border-gold-500 hover:bg-gold-50">Minta Sebutharga</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="reveal mx-auto max-w-3xl text-center">
+        <p class="text-sm font-bold uppercase tracking-[.25em] text-gold-600">Testimoni</p>
+        <h2 class="mt-4 font-display text-4xl font-bold text-slate-950 sm:text-5xl">Pengalaman Yang Diingati</h2>
+      </div>
+      <div class="mt-14 grid gap-6 lg:grid-cols-3">
+        <blockquote class="reveal rounded-3xl border border-slate-200 p-7">
+          <div class="text-gold-500">★★★★★</div>
+          <p class="mt-5 leading-7 text-slate-600">“Sesi sangat santai dan jurugambar banyak membantu dari segi pose. Hasil gambar nampak natural dan cantik.”</p>
+          <footer class="mt-6 font-semibold">Nur Aisyah <span class="block text-sm font-normal text-slate-400">Potret Individu</span></footer>
+        </blockquote>
+        <blockquote class="reveal rounded-3xl border border-slate-200 p-7">
+          <div class="text-gold-500">★★★★★</div>
+          <p class="mt-5 leading-7 text-slate-600">“Kami suka cara setiap momen keluarga dirakam. Anak-anak pun selesa sepanjang sesi.”</p>
+          <footer class="mt-6 font-semibold">Keluarga Faris <span class="block text-sm font-normal text-slate-400">Family Session</span></footer>
+        </blockquote>
+        <blockquote class="reveal rounded-3xl border border-slate-200 p-7">
+          <div class="text-gold-500">★★★★★</div>
+          <p class="mt-5 leading-7 text-slate-600">“Komunikasi mudah, datang tepat pada masa dan gambar majlis kami siap seperti dijanjikan.”</p>
+          <footer class="mt-6 font-semibold">Haziq & Alya <span class="block text-sm font-normal text-slate-400">Majlis Pertunangan</span></footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Process -->
+  <section class="bg-slate-950 py-24 text-white">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="reveal mx-auto max-w-3xl text-center">
+        <p class="text-sm font-bold uppercase tracking-[.25em] text-gold-400">Proses Tempahan</p>
+        <h2 class="mt-4 font-display text-4xl font-bold sm:text-5xl">Mudah Dari Mula Hingga Siap</h2>
+      </div>
+      <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="reveal rounded-3xl border border-white/10 p-6"><span class="text-4xl font-bold text-gold-400">01</span><h3 class="mt-5 text-lg font-semibold">Pilih Sesi</h3><p class="mt-2 text-sm leading-6 text-white/60">Tentukan jenis photoshoot dan pakej pilihan.</p></div>
+        <div class="reveal rounded-3xl border border-white/10 p-6"><span class="text-4xl font-bold text-gold-400">02</span><h3 class="mt-5 text-lg font-semibold">Tetapkan Tarikh</h3><p class="mt-2 text-sm leading-6 text-white/60">Semak slot, lokasi dan konsep bersama kami.</p></div>
+        <div class="reveal rounded-3xl border border-white/10 p-6"><span class="text-4xl font-bold text-gold-400">03</span><h3 class="mt-5 text-lg font-semibold">Hari Photoshoot</h3><p class="mt-2 text-sm leading-6 text-white/60">Nikmati sesi yang santai dengan panduan pose.</p></div>
+        <div class="reveal rounded-3xl border border-white/10 p-6"><span class="text-4xl font-bold text-gold-400">04</span><h3 class="mt-5 text-lg font-semibold">Terima Gambar</h3><p class="mt-2 text-sm leading-6 text-white/60">Gambar dihantar melalui galeri digital.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Form -->
+  <section id="tempahan" class="bg-slate-50 py-24">
+    <div class="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-5 lg:px-8">
+      <div class="reveal lg:col-span-2">
+        <p class="text-sm font-bold uppercase tracking-[.25em] text-gold-600">Hubungi Kami</p>
+        <h2 class="mt-4 font-display text-4xl font-bold text-slate-950 sm:text-5xl">Mari Rancang Sesi Anda</h2>
+        <p class="mt-5 leading-8 text-slate-600">Isi borang dan WhatsApp akan dibuka dengan mesej tempahan yang telah disediakan.</p>
+
+        <div class="mt-8 space-y-5">
+          <div class="flex gap-4"><span class="grid h-12 w-12 place-items-center rounded-2xl bg-gold-100 text-gold-700"><i class="fa-brands fa-whatsapp"></i></span><div><p class="font-semibold">WhatsApp</p><p class="text-sm text-slate-500">+60 12-685 3756</p></div></div>
+          <div class="flex gap-4"><span class="grid h-12 w-12 place-items-center rounded-2xl bg-gold-100 text-gold-700"><i class="fa-solid fa-envelope"></i></span><div><p class="font-semibold">E-mel</p><p class="text-sm text-slate-500">hello@jendelahati.com</p></div></div>
+          <div class="flex gap-4"><span class="grid h-12 w-12 place-items-center rounded-2xl bg-gold-100 text-gold-700"><i class="fa-solid fa-location-dot"></i></span><div><p class="font-semibold">Lokasi</p><p class="text-sm text-slate-500">Seluruh Lembah Klang, Pahang, Negeri Sembilan, Melaka & Johor</p></div></div>
+        </div>
+      </div>
+
+      <form id="bookingForm" class="reveal rounded-3xl bg-white p-7 shadow-soft sm:p-9 lg:col-span-3" novalidate>
+        <div class="grid gap-5 sm:grid-cols-2">
+          <div>
+            <label class="mb-2 block text-sm font-medium">Nama penuh *</label>
+            <input id="name" class="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none focus:border-gold-500 focus:ring-4 focus:ring-gold-100" type="text" placeholder="Nama anda" required />
+          </div>
+          <div>
+            <label class="mb-2 block text-sm font-medium">Nombor telefon *</label>
+            <input id="phone" class="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none focus:border-gold-500 focus:ring-4 focus:ring-gold-100" type="tel" placeholder="01X-XXXXXXX" required />
+          </div>
+          <div>
+            <label class="mb-2 block text-sm font-medium">Jenis photoshoot *</label>
+            <select id="service" class="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none focus:border-gold-500 focus:ring-4 focus:ring-gold-100" required>
+              <option value="">Pilih jenis sesi</option>
+              <option>Potret Individu</option>
+              <option>Couple / Pertunangan</option>
+              <option>Akad Nikah / Perkahwinan</option>
+              <option>Keluarga</option>
+              <option>Maternity / Baby</option>
+              <option>Birthday</option>
+              <option>Konvokesyen</option>
+              <option>Event</option>
+              <option>Korporat / Produk</option>
+            </select>
+          </div>
+          <div>
+            <label class="mb-2 block text-sm font-medium">Tarikh pilihan</label>
+            <input id="date" class="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none focus:border-gold-500 focus:ring-4 focus:ring-gold-100" type="date" />
+          </div>
+          <div class="sm:col-span-2">
+            <label class="mb-2 block text-sm font-medium">Lokasi</label>
+            <input id="location" class="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none focus:border-gold-500 focus:ring-4 focus:ring-gold-100" type="text" placeholder="Contoh: Shah Alam / Studio / Outdoor" />
+          </div>
+          <div class="sm:col-span-2">
+            <label class="mb-2 block text-sm font-medium">Mesej</label>
+            <textarea id="message" rows="5" class="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none focus:border-gold-500 focus:ring-4 focus:ring-gold-100" placeholder="Kongsikan konsep atau keperluan anda"></textarea>
+          </div>
+        </div>
+        <p id="formError" class="mt-4 hidden rounded-xl bg-red-50 px-4 py-3 text-sm text-red-600">Sila lengkapkan nama, nombor telefon dan jenis photoshoot.</p>
+        <p id="formSuccess" class="mt-4 hidden rounded-xl bg-emerald-50 px-4 py-3 text-sm text-emerald-700">Maklumat lengkap. WhatsApp sedang dibuka.</p>
+        <button class="mt-6 w-full rounded-full bg-slate-950 px-6 py-4 font-semibold text-white hover:bg-gold-500 hover:text-slate-950" type="submit">
+          Hantar Melalui WhatsApp <i class="fa-brands fa-whatsapp ml-2"></i>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-24">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <div class="reveal text-center">
+        <p class="text-sm font-bold uppercase tracking-[.25em] text-gold-600">Soalan Lazim</p>
+        <h2 class="mt-4 font-display text-4xl font-bold text-slate-950 sm:text-5xl">Perkara Yang Ramai Tanya</h2>
+      </div>
+
+      <div class="mt-12 space-y-4">
+        <div class="faq-item reveal rounded-2xl border border-slate-200">
+          <button class="faq-toggle flex w-full items-center justify-between p-6 text-left font-semibold"><span>Berapa lama gambar akan siap?</span><i class="faq-icon fa-solid fa-plus transition"></i></button>
+          <div class="faq-answer"><p class="px-6 pb-6 leading-7 text-slate-600">Kebiasaannya antara 7 hingga 21 hari bekerja bergantung pada jenis sesi dan jumlah gambar.</p></div>
+        </div>
+        <div class="faq-item reveal rounded-2xl border border-slate-200">
+          <button class="faq-toggle flex w-full items-center justify-between p-6 text-left font-semibold"><span>Adakah deposit diperlukan?</span><i class="faq-icon fa-solid fa-plus transition"></i></button>
+          <div class="faq-answer"><p class="px-6 pb-6 leading-7 text-slate-600">Ya. Deposit diperlukan untuk mengunci tarikh dan baki boleh dijelaskan mengikut terma pakej.</p></div>
+        </div>
+        <div class="faq-item reveal rounded-2xl border border-slate-200">
+          <button class="faq-toggle flex w-full items-center justify-between p-6 text-left font-semibold"><span>Boleh pilih lokasi sendiri?</span><i class="faq-icon fa-solid fa-plus transition"></i></button>
+          <div class="faq-answer"><p class="px-6 pb-6 leading-7 text-slate-600">Boleh. Kami juga boleh mencadangkan lokasi berdasarkan konsep, masa dan suasana yang anda mahukan.</p></div>
+        </div>
+        <div class="faq-item reveal rounded-2xl border border-slate-200">
+          <button class="faq-toggle flex w-full items-center justify-between p-6 text-left font-semibold"><span>Bagaimana jika hujan semasa sesi outdoor?</span><i class="faq-icon fa-solid fa-plus transition"></i></button>
+          <div class="faq-answer"><p class="px-6 pb-6 leading-7 text-slate-600">Kami boleh menukar masa, berpindah ke lokasi berbumbung atau menjadualkan semula mengikut keadaan.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 py-14 text-white">
+    <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
+      <div>
+        <p class="font-display text-2xl font-bold">Lensa Hati Comes Photography</p>
+        <p class="mt-4 max-w-md leading-7 text-white/55">Merakam emosi, mengabadikan kenangan dan menceritakan kisah anda melalui setiap bingkai.</p>
+      </div>
+      <div>
+        <p class="font-semibold">Pautan</p>
+        <div class="mt-4 grid gap-2 text-sm text-white/60">
+          <a href="#tentang" class="hover:text-gold-300">Tentang Kami</a>
+          <a href="#servis" class="hover:text-gold-300">Perkhidmatan</a>
+          <a href="#portfolio" class="hover:text-gold-300">Portfolio</a>
+          <a href="#pakej" class="hover:text-gold-300">Pakej</a>
+        </div>
+      </div>
+      <div>
+        <p class="font-semibold">Ikuti Kami</p>
+        <div class="mt-4 flex gap-3">
+          <a class="grid h-11 w-11 place-items-center rounded-full border border-white/15 hover:border-gold-400 hover:text-gold-300" href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a class="grid h-11 w-11 place-items-center rounded-full border border-white/15 hover:border-gold-400 hover:text-gold-300" href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a class="grid h-11 w-11 place-items-center rounded-full border border-white/15 hover:border-gold-400 hover:text-gold-300" href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a class="grid h-11 w-11 place-items-center rounded-full border border-white/15 hover:border-gold-400 hover:text-gold-300" href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="mx-auto mt-10 max-w-7xl border-t border-white/10 px-4 pt-7 text-sm text-white/40 sm:px-6 lg:px-8">
+      © <span id="year"></span> Lensa Hati Comes Photography. Hak cipta terpelihara.
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating -->
+  <a href="https://wa.me/60126853756" target="_blank" rel="noopener" class="fixed bottom-6 left-6 z-40 grid h-14 w-14 place-items-center rounded-full bg-emerald-500 text-2xl text-white shadow-2xl hover:-translate-y-1 hover:bg-emerald-400" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Back to top -->
+  <button id="backToTop" class="fixed bottom-6 right-6 z-40 hidden h-12 w-12 place-items-center rounded-full bg-slate-950 text-white shadow-2xl hover:bg-gold-500 hover:text-slate-950" aria-label="Kembali ke atas">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/95 p-4">
+    <button id="closeLightbox" class="absolute right-5 top-5 grid h-11 w-11 place-items-center rounded-full bg-white/10 text-white" aria-label="Tutup">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <img id="lightboxImage" class="max-h-[88vh] max-w-full rounded-xl object-contain" src="" alt="Paparan portfolio" />
+  </div>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    document.querySelectorAll('#mobileMenu a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+    const slides = document.querySelectorAll('.hero-slide');
+    let slideIndex = 0;
+    setInterval(() => {
+      slides[slideIndex].classList.remove('active');
+      slideIndex = (slideIndex + 1) % slides.length;
+      slides[slideIndex].classList.add('active');
+    }, 5000);
+
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-gold-500', 'text-slate-950', 'font-semibold');
+          b.classList.add('border', 'border-white/15', 'text-white/70');
+        });
+        btn.classList.add('bg-gold-500', 'text-slate-950', 'font-semibold');
+        btn.classList.remove('border', 'border-white/15', 'text-white/70');
+
+        const filter = btn.dataset.filter;
+        portfolioItems.forEach(item => {
+          item.classList.toggle('hidden-item', filter !== 'all' && item.dataset.category !== filter);
+        });
+      });
+    });
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    portfolioItems.forEach(item => item.addEventListener('click', () => {
+      lightboxImage.src = item.dataset.image;
+      lightbox.classList.remove('hidden');
+      lightbox.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }));
+    const closeLightbox = () => {
+      lightbox.classList.add('hidden');
+      lightbox.classList.remove('flex');
+      document.body.style.overflow = '';
+    };
+    document.getElementById('closeLightbox').addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+    const counters = document.querySelectorAll('.counter');
+    let countersStarted = false;
+    const counterObserver = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting && !countersStarted) {
+        countersStarted = true;
+        counters.forEach(counter => {
+          const target = +counter.dataset.target;
+          const duration = 1400;
+          const start = performance.now();
+          const update = now => {
+            const progress = Math.min((now - start) / duration, 1);
+            counter.textContent = Math.floor(progress * target).toLocaleString('ms-MY') + '+';
+            if (progress < 1) requestAnimationFrame(update);
+          };
+          requestAnimationFrame(update);
+        });
+      }
+    }, { threshold: .4 });
+    if (counters.length) counterObserver.observe(counters[0].parentElement.parentElement);
+
+    document.querySelectorAll('.faq-toggle').forEach(button => {
+      button.addEventListener('click', () => button.parentElement.classList.toggle('open'));
+    });
+
+    const bookingForm = document.getElementById('bookingForm');
+    bookingForm.addEventListener('submit', e => {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const service = document.getElementById('service').value;
+      const date = document.getElementById('date').value;
+      const location = document.getElementById('location').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const error = document.getElementById('formError');
+      const success = document.getElementById('formSuccess');
+
+      if (!name || !phone || !service) {
+        error.classList.remove('hidden');
+        success.classList.add('hidden');
+        return;
+      }
+
+      error.classList.add('hidden');
+      success.classList.remove('hidden');
+
+      const text = `Hai Lensa Hati Comes Photography, saya ingin membuat tempahan.%0A%0A` +
+        `Nama: ${encodeURIComponent(name)}%0A` +
+        `Telefon: ${encodeURIComponent(phone)}%0A` +
+        `Jenis photoshoot: ${encodeURIComponent(service)}%0A` +
+        `Tarikh pilihan: ${encodeURIComponent(date || 'Belum ditetapkan')}%0A` +
+        `Lokasi: ${encodeURIComponent(location || 'Belum ditetapkan')}%0A` +
+        `Mesej: ${encodeURIComponent(message || '-')}`;
+
+      setTimeout(() => window.open(`https://wa.me/60126853756?text=${text}`, '_blank'), 400);
+    });
+
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('hidden', window.scrollY < 500);
+      backToTop.classList.toggle('grid', window.scrollY >= 500);
+    });
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
